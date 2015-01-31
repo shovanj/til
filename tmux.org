@@ -1,0 +1,14 @@
+* Tmux Tips (Emacs Mode)
+
+** Copy & Paste
+
+#+BEGIN_SRC
+# copy to clipboard using xclip
+bind -t emacs-copy M-w copy-pipe 'xclip -in -selection clipboard'
+
+# set buffer from clipboard and set paste buffer
+bind - run "tmux set-buffer -- \"$(xclip -o -selection clipboard)\"; tmux paste-buffer"
+
+# list all buffers
+bind \ run "tmux list-buffers"
+#+END_SRC
