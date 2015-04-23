@@ -1,0 +1,13 @@
+* Bash
+
+** Repeat last command
+
+#+BEGIN_SRC
+$ nfsd restart
+Sorry, nfsd must be run as root
+
+$ sudo !!
+sudo nfsd restart
+Password:
+
+#+END_SRC
